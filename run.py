@@ -16,11 +16,8 @@ if __name__ == "__main__":
   for i in range(2):
     result,neg = model.predict("./image{}.jpg".format(i))
     input=result.split(' ')
-    
-    
     url = "http://127.0.0.1:7860"
-    print(result)
-    print("==========================",neg)
+    
     payload = {
       "prompt": "{}".format(result),
       "neg_prompt":"{}".format(neg),
