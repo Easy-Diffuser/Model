@@ -50,6 +50,7 @@ class Model(object):
     self.model = model
     self.config = config
     self.tokenizer = tokenizer
+  
 
   def evaluate(self, im):
     self.model.eval()
