@@ -11,24 +11,13 @@ global model
 class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     
         
-    def do_PUT(self):
-        filename = os.path.basename(self.path)
+    def do_POST(self):
+        content_len = int(self.headers.get('Content-Length'))
+        post_body = self.rfile.read(content_len)
         
-        name, ext = os.path.splitext(filename)
-
-        unique_filename = str(uuid.uuid4()) + ext
-
-        file_length = int(self.headers['Content-Length'])
-        read = 0
-        with open(unique_filename, 'wb+') as output_file:
-            while read < file_length:
-                new_read = self.rfile.read(min(66556, file_length - read))
-                read += len(new_read)
-                output_file.write(new_read)
-
-        # model run 추가 - 파일 이름 : unique_filename
-        print(unique_filename)
-        model.run(unique_filename)
+        image = post_body.decode('utf-8')
+        
+        model.run(image)
         
         reply = {
             'pos' : model.model.pos.split(),
@@ -47,8 +36,11 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b'')
 
 if __name__ == '__main__':
-    PORT = 5998
     model=run.export_tag()
+    
+    print("Server Run")
+    PORT = 5998
+    
     server = http.server.HTTPServer(('', PORT), HTTPRequestHandler)
     
     server.serve_forever()

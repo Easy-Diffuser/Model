@@ -20,7 +20,8 @@ class start():
     self.neg=None
     
   def run(self,img):
-    self.img=img
+    self.img=self.input_link(img)
+    
     if self.img!=None:
       self.pos,self.neg = self.model.predict(img)
       self.print_caption()
@@ -28,7 +29,7 @@ class start():
     elif self.link!=None:
       self.pos,self.neg = self.model.predict(self.link)
       self.link=None
-      self.send2ui(self)
+     
       
   def print_caption(self):
     print(self.pos, self.neg)
