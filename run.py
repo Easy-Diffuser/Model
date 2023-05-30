@@ -5,5 +5,5 @@ class export_tag():
         self.model=easy_diffuser.start()
     
     def run(self,img):
-        self.model.run(img)
+        self.model.run_link(img)
         # self.model.send2ui()

@@ -10,26 +10,27 @@ from io import BytesIO
 
 
 class start():
-  def __init__(self,img=None,link=None) :
+  def __init__(self,link=None,img=None) :
     self.model = m.Model()
-    if link!=None:
+    self.img=img
+    self.link=link
+    if link !=None:
       self.link=self.input_link(link)
-    else:
-      self.link=None
     self.pos=None
     self.neg=None
+    print(self.link)
     
-  def run(self,img):
-    self.img=self.input_link(img)
-    
-    if self.img!=None:
-      self.pos,self.neg = self.model.predict(img)
-      self.print_caption()
-      self.img=None
-    elif self.link!=None:
+  def run_link(self,link):
+    self.input_link(link)
+    if self.link!=None:
       self.pos,self.neg = self.model.predict(self.link)
-      self.link=None
-     
+      #self.print_caption()
+      
+  
+  def run_img(self,img):
+    self.img=img
+    self.pos,self.neg = self.model.predict(self.img)
+    
       
   def print_caption(self):
     print(self.pos, self.neg)
