@@ -1,3 +1,62 @@
+# {Title}
+
+{Logo}
+
+{
+    생성을 하고 싶은 이미지와 비슷한 Reference 이미지를 사용하여 새로운 이미지 생성에 필요로 하는 알맞은 Postive tag와 Negative tag를 추출합니다. 이를 통해 최소한의 시도로 원하는 이미지를 획득할 수 있도록 도움을 주는 소프트웨어입니다.
+}
+
+# Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Getting Started](#getting-started)
+4. [Support and Feeback](#support-and-feedback)
+5. [About Easy Diffuser](#about-easy-diffuser)
+6. [Licenses](#licensed)
+
+---
+
+## Features
+
+{
+ * run_link: 이미지 링크를 삽입하면 해당 이미지와 관련된 Positive prompt와 Negative prompt를 생성합니다.
+ * run_image: 이미지 파일을 삽입하면 해당 이미지와 관련된 Positive prompt와 Negative prompt를 생성합니다. 
+ * print_caption: run_link 또는 run_image를 통해 생성된 태그들을 출력합니다.
+ * send2ui: 생성된 태그들을 WEBUI로 전송합니다. Stable Diffusion이 해당 태그들을 받아 태그와 관련된 이미지를 생성하여 로컬 저장소에 저장합니다. 
+ * input_link: 이미지 링크를 삽입하면 모델이 학습할 수 있는 이미지 형식으로 전처리 해줍니다. 
+}
+
+---
+
+## Installation
+
+{}
+
+---
+
+## Getting Started
+
+{contents}
+
+---
+
+## Support and Feedback
+
+{contents}
+
+---
+
+## About Easy Diffuser
+
+{contents}
+
+---
+
+## Licenses
+
+{link to licenses file}
+
 # How To Use Easy Diffuser
 
 
