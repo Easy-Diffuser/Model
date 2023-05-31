@@ -31,7 +31,7 @@
 
 ## Installation
 
-{
+
 1. git clone https://huggingface.co/leeyunjai/img2txt
 
 2. git clone https://github.com/Easy-Diffuser/Model.git
@@ -42,13 +42,27 @@
 
 5. 해당 소프트웨어를 사용할 준비가 끝났습니다. 
 
-}
+
 
 ---
 
 ## Getting Started
 
-{contents}
+저희 소프트웨어의 기능을 사용하여 다른 제품을 개발을 하고 싶으시면 아래의 설명을 따르시면 됩니다.
+
+1. 사용할 빈 파일을 생성합니다. 
+
+2. easy diffuser를 import 해줍니다. 
+
+3. easy diffuser에는 start라는 Class가 있습니다. 해당 클래스에는 아래와 같은 메서드들이 있습니다. 
+
+| Function | Function Format | Description |
+|--------|----------------|-----------------------------|
+|run_link|Class_name.run_link(link)|이미지 링크를 사용하여 이미지와 관련된 Positive prompt와 Negative prompt tag들을 생성합니다.|
+|run_img|Class_name.run_img(img)|이미지 파일을 사용하여 이미지와 관련된 Positive prompt와 Negative prompt tag들을 생성합니다.|
+|print_caption|Class_name.print_caption()|run_link 또는 run_image를 통해 생성된 태그들을 출력합니다.|
+|input_img|Class_name.input_img(img)|local 저장소에 있는 이미지를 클래스 변수에 저장합니다.|
+|input_link|Class_name.input_link(link)|link형식의 이미지를 모델이 학습할 수 있는 이미지 형식으로 전처리 해줍니다.|
 
 ---
 
