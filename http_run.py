@@ -5,6 +5,8 @@ import socketserver
 import uuid
 import run
 import json
+import easy_diffuser
+
 
 global model
 
@@ -15,12 +17,11 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         post_body = self.rfile.read(content_len)
         
         image = post_body.decode('utf-8')
-        
-        model.run(image)
+        model.run_link(image)
         
         reply = {
-            'pos' : model.model.pos.split(),
-            'neg' : model.model.neg.split()
+            'pos' : model.pos.split(),
+            'neg' : model.neg.split()
         }
         
         reply_body = json.dumps(reply)
@@ -39,7 +40,7 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         http.server.SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
-    model=run.export_tag()
+    model=easy_diffuser.start()
     
     print("Server Run")
     PORT = 5998
