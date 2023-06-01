@@ -9,8 +9,7 @@ import json
 global model
 
 class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
-    
-        
+            
     def do_POST(self):
         content_len = int(self.headers.get('Content-Length'))
         post_body = self.rfile.read(content_len)
@@ -34,6 +33,10 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(404, 'Not Found')
         self.end_headers()
         self.wfile.write(b'')
+        
+    def end_headers(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        http.server.SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
     model=run.export_tag()
