@@ -8,8 +8,6 @@
 - 이를 통해 최소한의 시도로 원하는 이미지를 획득할 수 있도록 도움을 주는 소프트웨어입니다.
 
 
-
-
 # Table of Contents
 
 1. [Features](#features)
@@ -18,9 +16,6 @@
 4. [Support and Feeback](#support-and-feedback)
 5. [About Easy Diffuser](#about-easy-diffuser)
 6. [Licenses](#licensed)
-
-
-
 
 ---
 
@@ -35,9 +30,6 @@
  
 ---
 
-
-
-
 ## Installation
 
 
@@ -50,9 +42,6 @@
 4. webui-user.bat 파일에 set COMMANDLINE_ARGS=--api 해당 코드를 삽입합니다. 
 
 5. 해당 소프트웨어를 사용할 준비가 끝났습니다. 
-
-
-
 
 ---
 
@@ -75,10 +64,8 @@
 |input_link|Class_name.input_link(link)|link형식의 이미지를 모델이 학습할 수 있는 이미지 형식으로 전처리 해줍니다.|
 |send2ui|Class_name.send2ui()|이미지를 통해 얻은 태그들과 stable diffusion 모델을 사용하여 local 저장소에 이미지를 생성합니다.|
 |img2img_|Class_name.img2img_(link)|선택한 이미지와 비슷한 이미지를 stable diffusion 모델을 사용하여 local 저장소에 이미지를 생성합니다.|
+
 ---
-
-
-
 
 ## Support and Feedback
 
@@ -94,9 +81,6 @@
 
 ---
 
-
-
-
 ## About Easy Diffuser
 
 ### Easy Diffuser는 아래와 같은 문제 사항들을 해결하기 위해 개발이 되었습니다.
@@ -104,25 +88,28 @@
 #### 2. 둘째로, 반복된 diffusion 이미지 생성은 많은 컴퓨팅 자원과 전력을 소모한다
 #### 3. 이미지 생성 과정의 경험이 사용자 간에 공유되기 어렵다.
 
+
+
 해당 문제를 해결하기 위해 저희 Easy Diffuser는 아래와 같은 2가지 기능을 수행합니다.
 
 
-1.	Reference 이미지로부터 생성 조건을 추출하는 기능
-사용자는 Reference 이미지를 불러와 추출 기능을 작동시킨다. Easy Diffuser는 입력된 이미지를 OpenAI의 CLIP을 거쳐 텍스트로 변환하고, transformer 기반의 번역기를 사용해 태그 조합으로 번역을 수행한다. 결과물로 도출된 태그 조합은 사용자가 WebUI에서 txt2img의 입력으로 사용할 수 있다.
+    1.	Reference 이미지로부터 생성 조건을 추출하는 기능
+    사용자는 Reference 이미지를 불러와 추출 기능을 작동시킨다. Easy Diffuser는 입력된 이미지를 OpenAI의 CLIP을 거쳐 텍스트로 변환하고, transformer 기반의 번역기를 사용해 태그 조합으로 번역을 수행한다. 결과물로 도출된 태그 조합은 사용자가 WebUI에서 txt2img의 입력으로 사용할 수 있다.
 
-2.	Reference 이미지를 입력하여 img2img 생성을 수행하는 기능
-기존의 img2img 생성 기능은 사용자가 이미지를 찾고, 저장하고, 불러오는 등의 단계를 거쳐 동작하거나, txt2img로 생성한 이미지를 불러와 사용할 수 있었다. Easy Diffuser는 웹 페이지의 이미지를 바로 WebUI의 img2img 생성으로 불러올 수 있도록 간편한 메뉴를 지원한다.
+    2.	Reference 이미지를 입력하여 img2img 생성을 수행하는 기능
+    기존의 img2img 생성 기능은 사용자가 이미지를 찾고, 저장하고, 불러오는 등의 단계를 거쳐 동작하거나, txt2img로 생성한 이미지를 불러와 사용할 수 있었다. Easy Diffuser는 웹 페이지의 이미지를 바로 WebUI의 img2img 생성으로 불러올 수 있도록 간편한 메뉴를 지원한다.
 
 ---
-
 
 ## Citation
 
 [link] https://github.com/AUTOMATIC1111/stable-diffusion-webui (WEBUI API)
-[link] https://huggingface.co/leeyunjai/img2txt (IMG2TXT MODEL)
-[link] https://arxiv.org/pdf/2103.00020.pdf (Learning Transferable Visual Models From Natural Language Supervision)
-[link] https://arxiv.org/pdf/1706.03762.pdf (Attention is all you need)
 
+[link] https://huggingface.co/leeyunjai/img2txt (IMG2TXT MODEL)
+
+[link] https://arxiv.org/pdf/2103.00020.pdf (Learning Transferable Visual Models From Natural Language Supervision)
+
+[link] https://arxiv.org/pdf/1706.03762.pdf (Attention is all you need)
 
 ---
 
