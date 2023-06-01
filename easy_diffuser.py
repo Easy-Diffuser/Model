@@ -71,8 +71,9 @@ class start():
 
     payload = {
         "init_images":[img_base64],
-        "prompt": "human Highend black hair",
-        "steps": 5
+      "prompt": "{}".format(self.pos),
+      "neg_prompt":"{}".format(self.neg),
+      "steps": 50  
     }
 
     response = requests.post(url=f'{url}/sdapi/v1/img2img', json=payload)
