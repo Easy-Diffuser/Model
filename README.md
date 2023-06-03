@@ -1,7 +1,7 @@
 # HOW TO USE EASY-DIFFUSER
 
 ## Korean Version Readme
-README_KOR.md
+[README_KOR](https://github.com/Easy-Diffuser/Model/blob/main/README_KOR.md)
 
 
 ![Easy Diffuser Logo](logo.png)
