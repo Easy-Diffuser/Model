@@ -90,10 +90,10 @@ To solve these problems, Easy Diffuser provides the following two functions:
 
 ## Citation
 
-- [WEBUI API](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-- [IMG2TXT MODEL](https://huggingface.co/leeyunjai/img2txt)
-- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/pdf/2103.00020.pdf)
-- [Attention is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+- WEBUI API -> (https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- IMG2TXT MODEL -> (https://huggingface.co/leeyunjai/img2txt)
+- Learning Transferable Visual Models From Natural Language Supervision -> (https://arxiv.org/pdf/2103.00020.pdf)
+- Attention is All You Need -> (https://arxiv.org/pdf/1706.03762.pdf)
 
 ---
 
