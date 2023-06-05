@@ -8,6 +8,7 @@ import urllib.request
 import base64
 from io import BytesIO
 from urllib import request
+import uuid
 
 class start():
   def __init__(self,link=None,img=None) :
@@ -20,7 +21,7 @@ class start():
     self.neg=None
     
   def run_link(self,link):
-    self.link=self.input_link(link)
+    self.input_link(link)
     if self.link!=None:
       self.pos,self.neg = self.model.predict(self.link)
       #self.print_caption()
@@ -41,7 +42,7 @@ class start():
     req = urllib.request.Request(link, headers = {"User-Agent" : "Mozilla/5.0"})
     res = urllib.request.urlopen(req).read()
     self.link = Image.open(BytesIO(res))
-    return self.link
+    
   
   def send2ui(self):
       
@@ -61,7 +62,7 @@ class start():
   def img2img_(self,link):
     url = "http://127.0.0.1:7860"
     img_url=link
-        
+    file_name=str(uuid.uuid4()) 
     res = request.urlopen(link).read()
 
     img = Image.open(BytesIO(res))
@@ -89,4 +90,4 @@ class start():
 
         pnginfo = PngImagePlugin.PngInfo()
         pnginfo.add_text("parameters", response2.json().get("info"))
-        image.save('output.png', pnginfo=pnginfo)
+        image.save('../chrome-extension/local/output/output.png', pnginfo=pnginfo)

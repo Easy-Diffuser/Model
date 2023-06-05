@@ -16,9 +16,11 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         content_len = int(self.headers.get('Content-Length'))
         post_body = self.rfile.read(content_len)
         
-        image = post_body.decode('utf-8')
+        body = post_body.decode('utf-8')
+        option, image = body[:3], body[3:]
         model.run_link(image)
-        
+        if (option == "img"):
+            model.img2img_(image)
         reply = {
             'pos' : model.pos.split(),
             'neg' : model.neg.split()
