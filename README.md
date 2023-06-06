@@ -77,25 +77,19 @@ Or you can freely contact via email:
 
 ## About Easy Diffuser
 
-Easy Diffuser was developed to address the following issues:
-
-
 - Outputting tags may take approximately 3 seconds due to the large model size.
-
 - The software accurately extracts main keywords related to the image.
-
 - It generates images according to the user's preferences based on the Stable Diffusion model.
-
 - Various features have been implemented for developers.
-
 - The software is divided into fine-grained functions, making it easy to create other software.
 
+### Easy Diffuser was developed to address the following issues:
 
 1. Users spend a lot of time generating diffusion images.
 2. Repeated generation of diffusion images consumes a lot of computing resources and power.
 3. It is difficult to share the experience of the image generation process among users.
 
-To solve these problems, Easy Diffuser provides the following two functions:
+### To solve these problems, Easy Diffuser provides the following two functions:
 
 1. Extraction of generation conditions from a reference image:
    - Users can load a reference image and extract generation conditions. Easy Diffuser converts the input image into text using OpenAI's CLIP and translates it into tag combinations using a transformer-based translator. The resulting tag combinations can be used as inputs for `txt2img` in the WebUI.

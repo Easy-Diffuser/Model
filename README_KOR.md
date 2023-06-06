@@ -84,13 +84,9 @@ Or you can freely contact via email:
 ## About Easy Diffuser
 
 - 크기가 큰 모델이기에 태그를 출력하는 경우 시간이 약 3초 정도 걸립니다. 
-
 - 이미지와 관련된 Main keyword 들을 잘 추출합니다.
-
 - Stable Diffusion 모델에 따라 사용자의 취향에 맞는 이미지를 생성해줍니다. 
-
 - 개발자를 위해 여러 기능들이 구현이 되어있습니다. 
-
 - 기능별로 잘게 나누어져 있어 또 다른 소프트웨어를 만드는 데 용이합니다. 
 
 
