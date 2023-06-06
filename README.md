@@ -1,10 +1,8 @@
 # HOW TO USE EASY-DIFFUSER
 
-## Korean Version Readme
+![logo](https://github.com/Easy-Diffuser/Service/raw/main/imgs/logo.jfif)
+
 [README_KOR](https://github.com/Easy-Diffuser/Model/blob/main/README_KOR.md)
-
-
-![Easy Diffuser Logo](logo.png)
 
 Easy Diffuser is a software that helps generate new images by extracting appropriate positive and negative tags required for image generation using a reference image similar to the image you want to create. It assists in obtaining the desired image with minimal effort.
 
@@ -48,20 +46,19 @@ To develop other products using the features of our software, follow these steps
 2. Import Easy Diffuser into your project.
 3. The Easy Diffuser package includes a class called `start`, which provides the following methods:
 
-| Function | Function Format | Description |
-|----------|----------------|-------------|
-| `run_link` | `Class_name.run_link(link)` | Generates positive and negative prompt tags related to the image using the image link. |
-| `run_img` | `Class_name.run_img(img)` | Generates positive and negative prompt tags related to the image using the image file. |
-| `print_caption` | `Class_name.print_caption()` | Prints the generated tags from `run_link` or `run_image`. |
-| `input_img` | `Class_name.input_img(img)` | Saves the image from the local repository in the class variable. |
-| `input_link` | `Class_name.input_link(link)` | Preprocesses the link-formatted image into a format that the model can learn. |
-| `send2ui` | `Class_name.send2ui()` | Generates images based on the obtained tags and the stable diffusion model and saves them in the local repository. |
-| `img2img_` | `Class_name.img2img_(link)` | Generates similar images to the selected image using the stable diffusion model and saves them in the local repository. |
+| Function        | Function Format               | Description                                                                                                             |
+| --------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `run_link`      | `Class_name.run_link(link)`   | Generates positive and negative prompt tags related to the image using the image link.                                  |
+| `run_img`       | `Class_name.run_img(img)`     | Generates positive and negative prompt tags related to the image using the image file.                                  |
+| `print_caption` | `Class_name.print_caption()`  | Prints the generated tags from `run_link` or `run_image`.                                                               |
+| `input_img`     | `Class_name.input_img(img)`   | Saves the image from the local repository in the class variable.                                                        |
+| `input_link`    | `Class_name.input_link(link)` | Preprocesses the link-formatted image into a format that the model can learn.                                           |
+| `send2ui`       | `Class_name.send2ui()`        | Generates images based on the obtained tags and the stable diffusion model and saves them in the local repository.      |
+| `img2img_`      | `Class_name.img2img_(link)`   | Generates similar images to the selected image using the stable diffusion model and saves them in the local repository. |
 
 ---
 
 ## Support and Feedback
-
 
 Easy Diffuser is implemented by [박찬호](https://github.com/charlieppark), [허찬용](https://github.com/H-ChanY).
 
@@ -92,6 +89,7 @@ Or you can freely contact via email:
 ### To solve these problems, Easy Diffuser provides the following two functions:
 
 1. Extraction of generation conditions from a reference image:
+
    - Users can load a reference image and extract generation conditions. Easy Diffuser converts the input image into text using OpenAI's CLIP and translates it into tag combinations using a transformer-based translator. The resulting tag combinations can be used as inputs for `txt2img` in the WebUI.
 
 2. Image-to-image generation using a reference image:
@@ -101,7 +99,7 @@ Or you can freely contact via email:
 
 ## Citation
 
-- WEBUI API:  https://github.com/AUTOMATIC1111/stable-diffusion-webui
+- WEBUI API: https://github.com/AUTOMATIC1111/stable-diffusion-webui
 - IMG2TXT MODEL: https://huggingface.co/leeyunjai/img2txt
 - Learning Transferable Visual Models From Natural Language Supervision: https://arxiv.org/pdf/2103.00020.pdf
 - Attention is All You Need: https://arxiv.org/pdf/1706.03762.pdf
