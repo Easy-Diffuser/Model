@@ -69,6 +69,20 @@
 
 ## Support and Feedback
 
+Easy Diffuser is implemented by [박찬호](https://github.com/charlieppark), [허찬용](https://github.com/H-ChanY).
+
+If there's any need for support or feedback, feel free to add issues in the corresponding repository.
+
+Or you can freely contact via email:
+
+박찬호 : chanho.park@dankook.ac.kr
+
+허찬용 : chanyong@dankook.ac.kr
+
+---
+
+## About Easy Diffuser
+
 - 크기가 큰 모델이기에 태그를 출력하는 경우 시간이 약 3초 정도 걸립니다. 
 
 - 이미지와 관련된 Main keyword 들을 잘 추출합니다.
@@ -79,9 +93,6 @@
 
 - 기능별로 잘게 나누어져 있어 또 다른 소프트웨어를 만드는 데 용이합니다. 
 
----
-
-## About Easy Diffuser
 
 ### Easy Diffuser는 아래와 같은 문제 사항들을 해결하기 위해 개발이 되었습니다.
 #### 1. diffusion 이미지 생성을 위해 사용자는 많은 시간을 소모해야 한다.

@@ -62,17 +62,34 @@ To develop other products using the features of our software, follow these steps
 
 ## Support and Feedback
 
-- Outputting tags may take approximately 3 seconds due to the large model size.
-- The software accurately extracts main keywords related to the image.
-- It generates images according to the user's preferences based on the Stable Diffusion model.
-- Various features have been implemented for developers.
-- The software is divided into fine-grained functions, making it easy to create other software.
+
+Easy Diffuser is implemented by [박찬호](https://github.com/charlieppark), [허찬용](https://github.com/H-ChanY).
+
+If there's any need for support or feedback, feel free to add issues in the corresponding repository.
+
+Or you can freely contact via email:
+
+박찬호 : chanho.park@dankook.ac.kr
+
+허찬용 : chanyong@dankook.ac.kr
 
 ---
 
 ## About Easy Diffuser
 
 Easy Diffuser was developed to address the following issues:
+
+
+- Outputting tags may take approximately 3 seconds due to the large model size.
+
+- The software accurately extracts main keywords related to the image.
+
+- It generates images according to the user's preferences based on the Stable Diffusion model.
+
+- Various features have been implemented for developers.
+
+- The software is divided into fine-grained functions, making it easy to create other software.
+
 
 1. Users spend a lot of time generating diffusion images.
 2. Repeated generation of diffusion images consumes a lot of computing resources and power.
